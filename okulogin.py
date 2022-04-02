@@ -9,62 +9,6 @@ gui.title('Deneme')
 gui.geometry('900x350')
 
 gui.configure(background='')
-#temel-basic kavramlar
-'''
-def outMessage():
-    msj.showinfo(title='Basarili!',message='Giris Basarili!')
-
-kAdi = Label(gui, text='Kullanici adiniz', fg='black')
-kAdi.grid()
-
-kAdiEntry = StringVar()
-soyAdi = StringVar()
-ad = Entry(gui,text='Adiniz',textvariable=kAdiEntry)
-ad.grid()
-
-sAdi = Label(gui, text='Soyadinizi Giriniz', fg='black')
-sAdi.grid()
-
-inSoyAdi = Entry(gui,text='Soyadiniz',textvariable=soyAdi)
-inSoyAdi.grid(padx=180,pady=5)
-
-if len(kAdiEntry) > 1 and len(soyAdi) > 1:
-
-    login = Button(gui,text='Giris Yap', bg='black',fg='white',command=outMessage)
-    login.grid()
-else:
-    msj.showinfo(gui,title='Basarisiz',message='Kullanici adinizi veya sifrenizi giriniz!')
-    
-#temel-basic kavramlar
-
-
-#dosya yolu
-foldername = ''
-def folderr():
-    global foldername
-    foldername = filedialog.askdirectory()
-
-    if len(foldername) > 1:
-
-        folder.configure(text='Dosya yolunu degistirmek icin basiniz!',command=folderr)
-        cikti.config(text=foldername,fg='green')
-
-folder = Button(gui, text='Dosya yolunu seciniz ',command=folderr)
-folder.grid()
-cikti = Label(gui, fg='green',text='{}'.format(foldername))  # pack() kullanilirsa .grid kullanilamaz. Pack ise ortalamayi saglar.
-cikti.grid()
-
-#dosya yolu
-
-
-#fotograf ekleme
-
-foto = PhotoImage(file='mermivetahtamomentum.png')
-Button(gui,image=foto,command=None).pack(pady=10)
-
-
-#fotograf ekleme
-'''
 bg = PhotoImage(file="download.png")
 
 # Show image using label
